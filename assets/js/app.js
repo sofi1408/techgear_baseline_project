@@ -1,4 +1,3 @@
-// Heavy computation (TBT demo)
 function heavyComputation() {
   let result = 0;
   for (let i = 0; i < 1200000; i++) {
@@ -8,9 +7,8 @@ function heavyComputation() {
 }
 for (let i = 0; i < 4; i++) heavyComputation();
 
-// Unthrottled scroll work (bad)
 window.addEventListener("scroll", function () {
-  document.querySelectorAll(".tg-card").forEach(card => {
+  document.querySelectorAll(".tg-card").forEach((card) => {
     const rect = card.getBoundingClientRect();
     if (rect.top < window.innerHeight) {
       card.style.opacity = "1";
@@ -18,7 +16,7 @@ window.addEventListener("scroll", function () {
   });
 });
 
-document.querySelectorAll(".tg-buy").forEach(btn => {
+document.querySelectorAll(".tg-buy").forEach((btn) => {
   btn.addEventListener("click", () => alert("Added to cart!"));
 });
 

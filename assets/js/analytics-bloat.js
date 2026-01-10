@@ -6,12 +6,12 @@
   }
 })();
 
-// Late insert bar => CLS (for your tutorial)
 window.addEventListener("load", () => {
   setTimeout(() => {
     const bar = document.createElement("div");
     bar.className = "tg-strip";
-    bar.textContent = "⚡ Extra 10% OFF with code NEW10 — added late (CLS demo)";
+    bar.textContent =
+      "⚡ Extra 10% OFF with code NEW10 — added late (CLS demo)";
     document.body.prepend(bar);
   }, 1200);
 });
