@@ -98,17 +98,32 @@ a {
 }
 
 /* Hero */
-.tg-hero {
+/* .tg-hero {
   position: relative;
   height: 680px;
   background: url("../img/banner.webp") center/cover no-repeat;
   border-bottom: 1px solid var(--line);
   overflow: hidden;
+} */
+.tg-hero {
+  position: relative;
+  height: 680px;
+  border-bottom: 1px solid var(--line);
+  overflow: hidden;
+}
+.tg-hero-img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
 }
 .tg-hero::before {
   content: "";
   position: absolute;
   inset: 0;
+  z-index: 1;
   background: linear-gradient(
     90deg,
     rgba(8, 12, 26, 0.92) 0%,
@@ -116,6 +131,8 @@ a {
     rgba(8, 12, 26, 0.55) 100%
   );
   backdrop-filter: blur(6px);
+  -webkit-backdrop-filter: blur(6px);
+  pointer-events: none;
 }
 .tg-container {
   width: min(1200px, 92vw);
@@ -127,6 +144,7 @@ a {
   display: flex;
   align-items: center;
   padding: 0 20px;
+  z-index: 2;
 }
 .tg-hero-box {
   max-width: 760px;
