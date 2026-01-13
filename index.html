@@ -14,27 +14,31 @@
 
     <!-- Big vendor CSS -->
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.css"
     />
     <link
-      rel="stylesheet"
+      rel="preload"
+      as="style"
       href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick-theme.css"
     />
 
     <link rel="stylesheet" href="./assets/css/app.css" />
-    <link rel="stylesheet" href="./assets/css/waste.css" />
+    <link rel="preload" as="style" href="./assets/css/waste.css" />
 
     <!-- BAD: blocking script in head -->
-    <script src="./assets/js/analytics-bloat.js"></script>
+    <script defer src="./assets/js/analytics-bloat.js"></script>
   </head>
   <body>
     <header class="tg-header">
@@ -51,6 +55,15 @@
     </header>
 
     <section class="tg-hero">
+      <img
+        class="tg-hero-img"
+        src="./assets/img/banner.webp"
+        alt=""
+        width="4600"
+        height="2000"
+        fetchpriority="high"
+        decoding="async"
+      />
       <div class="tg-container tg-hero-content">
         <div class="tg-hero-box">
           <div class="tg-pill">🔥 New Year Deals • Limited time</div>
@@ -483,11 +496,17 @@
     </footer>
 
     <!-- Vendor JS -->
-    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <script defer src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script
+      defer
+      src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.9.0/slick.min.js"
+    ></script> -->
+    <!-- <script
+      defer
+      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    ></script> -->
 
-    <script src="./assets/js/carousel-init.js"></script>
-    <script src="./assets/js/app.js"></script>
+    <script defer src="./assets/js/carousel-init.js"></script>
+    <script defer src="./assets/js/app.js"></script>
   </body>
 </html>
