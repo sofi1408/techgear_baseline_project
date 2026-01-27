@@ -5,7 +5,6 @@ function heavyComputation() {
   }
   return result;
 }
-for (let i = 0; i < 4; i++) heavyComputation();
 
 window.addEventListener("scroll", function () {
   document.querySelectorAll(".tg-card").forEach((card) => {
@@ -14,10 +13,11 @@ window.addEventListener("scroll", function () {
       card.style.opacity = "1";
     }
   });
+  for (let i = 0; i < 4; i++) heavyComputation();
 });
 
 document.querySelectorAll(".tg-buy").forEach((btn) => {
   btn.addEventListener("click", () => alert("Added to cart!"));
 });
 
-setInterval(() => console.log("heartbeat:", Math.random()), 1000);
+// setInterval(() => console.log("heartbeat:", Math.random()), 1000);
