@@ -1,10 +1,10 @@
 // Pretend this is AB testing + analytics (blocking)
-(function () {
-  const s = performance.now();
-  while (performance.now() - s < 3200) {
-    Math.sqrt(Math.random() * 9999999);
-  }
-})();
+// (function () {
+//   const s = performance.now();
+//   while (performance.now() - s < 3200) {
+//     Math.sqrt(Math.random() * 9999999);
+//   }
+// })();
 
 window.addEventListener("load", () => {
   setTimeout(() => {
